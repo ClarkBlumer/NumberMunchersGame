@@ -32,22 +32,22 @@ public class MonsterBehavior : MonoBehaviour {
             if (random == 0 && MonsterTransform.position.x < 2) // right
             {
                 MonsterTransform.position = new Vector2(MonsterTransform.position.x + 1, MonsterTransform.position.y); // Moves the monster on the x-axis. +1 to move right, -1 to move left. y position stays the same
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(Random.Range(2,5));
             }
             if (random == 2 && MonsterTransform.position.x > -2) // left
             {
                 MonsterTransform.position = new Vector2(MonsterTransform.position.x - 1, MonsterTransform.position.y); 
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(Random.Range(2, 5));
             }
             if (random == 1 && MonsterTransform.position.y < 2) // up
             {
                 MonsterTransform.position = new Vector2(MonsterTransform.position.x, MonsterTransform.position.y + 1); // Moves the monster on the y-axis. +1 up, -1 down.
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(Random.Range(2, 5));
             }
             if (random == 3 && MonsterTransform.position.y > -2) // down
             {
                 MonsterTransform.position = new Vector2(MonsterTransform.position.x, MonsterTransform.position.y - 1); 
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(Random.Range(2, 5));
             }
         }
     }
